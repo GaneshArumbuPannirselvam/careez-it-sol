@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+/* Import Geometric Sans-Serif (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.menu-btn {
+  background: none;
+  border: 1px solid #444;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Banner / Hero Section */
+.hero-section {
+  /* Clean radial gradient background */
+  background: radial-gradient(circle, #ffffff 0%, #e8e8e8 100%);
+  padding: 8% 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+}
+
+.banner-logo {
+  margin-bottom: 2rem;
+}
+
+.logo-icon-large {
+  width: 80px;
+  height: 80px;
+}
+
+.main-heading {
+  color: #0A3F1F; /* Dark Forest Green */
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: none; /* Keeps mixed case */
+}
+
+.tagline {
+  color: #0A3F1F;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 4px; /* Wide letter spacing */
+  text-transform: uppercase;
+  max-width: 80%;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #1A5A35; /* Base Forest Green */
+  color: white;
+  padding: 4rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon-footer {
+  width: 40px;
+  height: 40px;
+  fill: #1A5A35; /* Inverted for white background */
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-subtext {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+/* Fixed Icons Row */
+.features-row {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.feature-item svg {
+  color: #8fce00; /* Light accent green for the SVGs */
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+  width: 100%;
 }

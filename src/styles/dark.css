@@ -1,0 +1,9 @@
+.dark-mode {
+  background: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+
+.dark-mode .card {
+  background: var(--dark-card) !important;
+  color: var(--dark-text) !important;
+}
