@@ -9,9 +9,17 @@
   --dark-card: #111622;
   --dark-text: #E6E8EF;
 }
+.logo-heading {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: #0A3F1F;
+  letter-spacing: 0.02em;
+}
 
 body {
   background: var(--bg-light);
   color: var(--text-dark);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
 }

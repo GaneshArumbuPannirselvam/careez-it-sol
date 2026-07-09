@@ -1,52 +1,27 @@
-import banner from "../assets/banner.png";
-
-export default function Hero() {
+function Hero() {
   return (
-    <header
-      className="text-center"
-      style={{
-        background: "radial-gradient(circle, #fdfdfd 0%, #e9e9e9 100%)",
-        paddingTop: "40px",
-        paddingBottom: "40px",
-      }}
-    >
-      <img
-        src={banner}
-        alt="CareEZ IT SOL Banner"
-        style={{
-          width: "70%",
-          maxWidth: "650px",
-          marginBottom: "25px",
-          objectFit: "contain",
-        }}
-      />
-
-      <h1
-        style={{
-          fontFamily: "Poppins, sans-serif",
-          fontSize: "2.4rem",
-          fontWeight: 600,
-          color: "#0A3F1F",
-          marginBottom: "10px",
-          letterSpacing: "0.5px",
-        }}
-      >
+    <section style={{
+      textAlign: "center",
+      padding: "60px 20px",
+      background: "radial-gradient(circle at center, #f9f9f9 0%, #eaeaea 100%)"
+    }}>
+      <h2 style={{
+        fontFamily: "Montserrat, sans-serif",
+        fontWeight: 600,
+        fontSize: "1.8rem",
+        color: "#1A5A35"
+      }}>
         Tech Solutions with a Human Touch
-      </h1>
-
-      <p
-        style={{
-          fontFamily: "Poppins, sans-serif",
-          fontSize: "1rem",
-          fontWeight: 500,
-          color: "#0A3F1F",
-          letterSpacing: "0.25rem",
-          marginBottom: "0",
-          textTransform: "uppercase",
-        }}
-      >
-        Sales | IT Services | Network Solutions | Green Consulting
+      </h2>
+      <p style={{
+        fontFamily: "Poppins, sans-serif",
+        fontSize: "1rem",
+        color: "#1A5A35"
+      }}>
+        Empowering businesses with sustainable technology and green innovation.
       </p>
-    </header>
+    </section>
   );
 }
+
+export default Hero;

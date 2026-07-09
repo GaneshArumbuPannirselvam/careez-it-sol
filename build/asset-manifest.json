@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1367a2fd.css",
+    "main.js": "/static/js/main.94f4e347.js",
+    "static/media/logo.png": "/static/media/logo.e90da4791e1d478a4b16.png",
+    "static/media/vision.jpg": "/static/media/vision.4db9e035a922d6065879.jpg",
+    "static/media/GreenInfrastructure.jpg": "/static/media/GreenInfrastructure.14e80abbed64d327f28a.jpg",
+    "static/media/ProfessionalServices.jpg": "/static/media/ProfessionalServices.237bd1e0c0d0c2a91eff.jpg",
+    "static/media/ManagedServices.jpg": "/static/media/ManagedServices.031d55e4ee9a1984b965.jpg",
+    "static/media/careers.jpg": "/static/media/careers.17976fb65e32f1ec4811.jpg",
+    "static/media/contact.jpg": "/static/media/contact.87aa33756169f9497b24.jpg",
+    "static/media/Home.jpg": "/static/media/Home.49a2c124a36914f78a30.jpg",
+    "index.html": "/index.html",
+    "main.1367a2fd.css.map": "/static/css/main.1367a2fd.css.map",
+    "main.94f4e347.js.map": "/static/js/main.94f4e347.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1367a2fd.css",
+    "static/js/main.94f4e347.js"
+  ]
+}

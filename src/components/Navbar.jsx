@@ -1,52 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import DarkModeToggle from "./DarkModeToggle";
+import "../App.css";
 
-export default function Navbar() {
+function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="/">
-          <img
-            src={logo}
-            alt="CareEZ IT SOL Logo"
-            style={{
-              width: "65px",
-              height: "auto",
-              marginRight: "12px",
-              objectFit: "contain"
-            }}
-          />
-          <span
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 600,
-              letterSpacing: "0.5px"
-            }}
-          >
-            CareEZ IT SOL
-          </span>
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <nav className="navbar">
 
-        <div id="nav" className="collapse navbar-collapse">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item"><a className="nav-link" href="/about">About</a></li>
-            <li className="nav-item"><a className="nav-link" href="/services">Services</a></li>
-            <li className="nav-item"><a className="nav-link" href="/vision">Vision</a></li>
-            <li className="nav-item"><a className="nav-link" href="/careers">Careers</a></li>
-            <li className="nav-item"><a className="nav-link" href="/contact">Contact</a></li>
-          </ul>
-          <DarkModeToggle />
-        </div>
+      {/* LEFT — LOGO */}
+      <div className="logo-container">
+        <img src={logo} alt="CareEZ IT SOL Logo" className="logo-icon" />
+        <span className="logo-text">CareEZ IT SOL</span>
       </div>
+
+      {/* MOBILE MENU BUTTON */}
+      <button className="menu-toggle" onClick={() => setOpen(!open)}>
+        ☰
+      </button>
+
+      {/* RIGHT — NAV LINKS */}
+      <div className={`nav-links ${open ? "open" : ""}`}>
+        <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+        <Link to="/ManagedServices" onClick={() => setOpen(false)}>Managed Services</Link>
+        <Link to="/ProfessionalServices" onClick={() => setOpen(false)}>Professional Services</Link>
+        <Link to="/GreenServices" onClick={() => setOpen(false)}>Green IT & LEED</Link>
+        <Link to="/vision" onClick={() => setOpen(false)}>Vision</Link>
+        <Link to="/careers" onClick={() => setOpen(false)}>Careers</Link>
+        <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+      </div>
+
     </nav>
   );
 }
+
+export default Navbar;

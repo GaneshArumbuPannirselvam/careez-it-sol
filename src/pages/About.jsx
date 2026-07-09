@@ -1,29 +1,34 @@
-export default function About() {
+import aboutImg from "../assets/about.jpg";
+
+function About() {
   return (
-    <div className="container py-5">
-      <div className="row align-items-center g-4">
-        <div className="col-md-6">
-          <h1 className="fw-bold mb-3">About Careez IT Sol</h1>
-          <p className="fs-5 text-muted">
-            Careez IT Sol blends “Care” and “Ease” to remove friction from technology.
-            We design secure, sustainable, and human‑centric solutions that let organizations
-            focus on what matters most.
+    <section className="py-12 px-4 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Our Core Story</h1>
+          <p className="text-gray-600 text-base leading-relaxed mb-4">
+            CareEZ IT SOL was built with a clear purpose: to bridge the critical gap between complex, enterprise-grade systems engineering and small-to-medium enterprise operations. We remove technical gatekeeping by keeping your IT assets meticulously mapped, clear, and visible to you at all times.
           </p>
+          
+          <h2 className="text-xl font-bold text-gray-800 mt-6 mb-2">The Operational Promise</h2>
+          <ul className="space-y-3 text-sm text-gray-600">
+            <li>
+              <strong className="text-gray-900">Proactive Auditing:</strong> We target hardware faults and logical vulnerabilities before they impact your office production lines.
+            </li>
+            <li>
+              <strong className="text-gray-900">Agile Tracking:</strong> Utilizing structured operational frameworks to track issues transparently with rapid ticket closure and zero hidden fees.
+            </li>
+            <li>
+              <strong className="text-gray-900">Total Transparency:</strong> Your configurations, admin accounts, and setup parameters belong entirely to your business—never locked away by your vendor.
+            </li>
+          </ul>
         </div>
-        <div className="col-md-6">
-          <div className="card border-0 shadow-sm">
-            <div className="card-body">
-              <h5 className="fw-semibold mb-2">What we stand for</h5>
-              <ul className="mb-0 text-muted">
-                <li>Security by design</li>
-                <li>Sustainable, responsible IT</li>
-                <li>Partnership over transactions</li>
-                <li>Clarity instead of complexity</li>
-              </ul>
-            </div>
-          </div>
+        <div>
+          <img src={aboutImg} alt="About CareEZ IT SOL Infrastructure Teams" className="w-full rounded-2xl shadow-xl object-cover max-h-[450px]" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
+
+export default About;
