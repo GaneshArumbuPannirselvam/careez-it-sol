@@ -30,9 +30,10 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           ###### Repository/Build Configurations ######
-          app_location: "/" # Where your package.json sits
+          app_location: "/"          # Root location of your React source code
           api_location: "" 
-          output_location: "build" # 🔥 Perfectly matched to your production folder!
+          output_location: "build"    # Directs Azure to find the compiled Create React App folder
+          skip_app_build: false       # Explicitly forces Azure to execute the full npm compilation pipeline
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
