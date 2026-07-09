@@ -20,27 +20,29 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies and compile
-        run: |
-          npm i
-          npm run build
-        env:
-          CI: false
-
-      - name: Upload Build to Azure
+      - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
+        env:
+          CI: false # Bypasses strict warnings so your build doesn't crash
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_SMOKE_0FBB47110 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "dist" # Fixes the directory mapping path
+          ###### Repository/Build Configurations ######
+          app_location: "/" # Where your package.json sits
           api_location: "" 
-          output_location: "" 
-          skip_app_build: true
+          output_location: "build" # 🔥 Perfectly matched to your production folder!
+          ###### End of Repository/Build Configurations ######
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_SMOKE_0FBB47110 }}
+          action: "close"
