@@ -11,7 +11,7 @@ function Navbar() {
       {/* LEFT — LOGO */}
       <div className="logo-container">
         <img src={logo} alt="CareEZ IT SOL Logo" className="logo-icon" />
-        <span className="logo-text">CareEZ IT SOL</span>
+        <span className="logo-text">CareEZ</span>
       </div>
 
       {/* MOBILE MENU BUTTON */}
@@ -26,9 +26,11 @@ function Navbar() {
         <Link to="/ManagedServices" onClick={() => setOpen(false)}>Managed Services</Link>
         <Link to="/ProfessionalServices" onClick={() => setOpen(false)}>Professional Services</Link>
         <Link to="/GreenServices" onClick={() => setOpen(false)}>Green IT & LEED</Link>
+        {/* NEW: Community Shoppe Link */}
+        <Link to="/shoppe" onClick={() => setOpen(false)} style={{ color: '#059669', fontWeight: 'bold' }}>Community Shoppe</Link>
         <Link to="/insights" onClick={() => setOpen(false)}>Insights</Link>
         <Link to="/careers" onClick={() => setOpen(false)}>Careers</Link>
-        <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+        <Link to="/contact" onClick={() => setOpen(false)} className="cta-button">Contact</Link>
       </div>
     </nav>
   );

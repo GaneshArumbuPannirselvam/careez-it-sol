@@ -20,33 +20,27 @@
 
 body { 
   color: var(--text); 
-  line-height: 1.6; 
-}
-body {
-  /* Outer border: 8px soft tech charcoal */
+  line-height: 1.6;
   border: 8px solid #262626; 
-  
-  /* Inner border: 8px safety orange */
-  box-shadow: inset 0 0 0 8px #FC7713; 
+  box-shadow: inset 0 0 0 8px #FC7713;
+  min-height: 100vh;
 }
-
-
 
 /* -------------------------------------------------- */
-/* CareEZ IT SOL — Updated Navbar Branding (ONLY THIS) */
+/* NAVBAR & CTA STYLING */
 /* -------------------------------------------------- */
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 10%;
+  padding: 1.5rem 5%;
   background: white;
-  border-bottom: 3px solid #0A3F1F10;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-bottom: 3px solid #FFA857;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .logo-container { 
@@ -55,154 +49,95 @@ body {
   gap: 14px; 
 }
 
-.logo-icon { 
-  width: 55px; 
-}
+.logo-icon { width: 55px; }
 
 .logo-text { 
   font-weight: 700; 
   font-size: 1.6rem; 
   color: var(--primary); 
   letter-spacing: 1.5px;
-  }
+}
 
 .nav-links { 
   display: flex; 
-  gap: 2.8rem; 
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a { 
   text-decoration: none; 
   color: #444; 
   font-weight: 600; 
-  font-size: 1rem;
-  letter-spacing: 1px;
   transition: 0.3s; 
 }
 
-.nav-links a:hover { 
-  color: var(--primary); 
-  letter-spacing: 1.5px;
-}
-.page-image {
-  width: 40%;
-  max-width: 300px;
-  margin: 20px auto;
-  display: block;
-}
-
-/* -------------------------------------------------- */
-/* Your original CSS below — unchanged                 */
-/* -------------------------------------------------- */
-
-/* Hero Section */
-.hero-section {
-  padding: 100px 10%;
-  text-align: center;
-  background: linear-gradient(135deg, #f4f7f6 0%, #e8e8e8 100%);
-}
-
-.main-heading { font-size: 3.5rem; color: var(--primary); margin-bottom: 1rem; }
-.tagline { font-size: 1.2rem; color: #666; letter-spacing: 2px; margin-bottom: 2rem; }
-
-.cta-button {
-  background: var(--primary); color: white; padding: 15px 35px;
-  border-radius: 5px; text-decoration: none; font-weight: 600;
-}
-
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 50px 10%;
-}
-
-.service-card {
-  padding: 2rem;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.service-card:hover { border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-/* Contact Section */
-.contact-section { padding: 80px 10%; background: var(--primary); color: white; }
-.contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
-input, textarea { padding: 15px; border-radius: 5px; border: none; }
-
-.page-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.page-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 20px;
-}
-
-.page-text {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.page-image {
-  width: 40%;
-  max-width: 280px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 3px solid #FFA857; /* sunrise border */
-}
+.nav-links a:hover { color: #F6D365; }
 
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   background: none;
   border: none;
   color: #FFA857;
+  cursor: pointer;
+  z-index: 1001;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
+.cta-button {
+  background-color: var(--primary);
+  color: #ffffff !important;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
 }
+
+.cta-button:hover {
+  background-color: #0c4a24;
+}
+
+/* -------------------------------------------------- */
+/* MOBILE RESPONSIVENESS */
+/* -------------------------------------------------- */
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+  .menu-toggle { display: block; }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #fff;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 90px;
+    right: 5%;
+    background: white;
     border: 2px solid #FFA857;
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 200px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
 
-  .nav-links.open {
-    display: flex;
-  }
+  .nav-links.open { display: flex; }
 }
-.nav-links a:hover {
-  color: #F6D365;
-}
-box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 
+/* -------------------------------------------------- */
+/* SECTIONS (UNCHANGED) */
+/* -------------------------------------------------- */
+
+.hero-section { padding: 100px 10%; text-align: center; background: linear-gradient(135deg, #f4f7f6 0%, #e8e8e8 100%); }
+.main-heading { font-size: 3.5rem; color: var(--primary); margin-bottom: 1rem; }
+.tagline { font-size: 1.2rem; color: #666; letter-spacing: 2px; margin-bottom: 2rem; }
+
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 50px 10%; }
+.service-card { padding: 2rem; border: 1px solid #eee; border-radius: 10px; transition: 0.3s; }
+.service-card:hover { border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.contact-section { padding: 80px 10%; background: var(--primary); color: white; }
+.contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+input, textarea { padding: 15px; border-radius: 5px; border: none; }
+
+.page-section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+.page-title { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; }
+.page-text { font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 30px; }
+.page-image { width: 40%; max-width: 280px; margin: 20px auto; display: block; border-radius: 10px; }

@@ -11,6 +11,7 @@ import GreenServices from "./pages/GreenServices";
 import Insights from "./pages/Insights";
 import ArticleTemplate from "./pages/ArticleTemplate";
 import Transparency from "./pages/Transparency";
+import CommunityShoppe from './pages/CommunityShoppe';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/GreenServices" element={<GreenServices />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/shoppe" element={<CommunityShoppe />} />
             <Route path="/transparency" element={<Transparency />} />
             
             {/* Article Routes */}
