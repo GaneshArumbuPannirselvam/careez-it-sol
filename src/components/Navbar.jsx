@@ -8,7 +8,6 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-
       {/* LEFT — LOGO */}
       <div className="logo-container">
         <img src={logo} alt="CareEZ IT SOL Logo" className="logo-icon" />
@@ -23,15 +22,14 @@ function Navbar() {
       {/* RIGHT — NAV LINKS */}
       <div className={`nav-links ${open ? "open" : ""}`}>
         <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-        <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+        <Link to="/about" onClick={() => setOpen(false)}>Company</Link>
         <Link to="/ManagedServices" onClick={() => setOpen(false)}>Managed Services</Link>
         <Link to="/ProfessionalServices" onClick={() => setOpen(false)}>Professional Services</Link>
         <Link to="/GreenServices" onClick={() => setOpen(false)}>Green IT & LEED</Link>
-        <Link to="/vision" onClick={() => setOpen(false)}>Vision</Link>
+        <Link to="/insights" onClick={() => setOpen(false)}>Insights</Link>
         <Link to="/careers" onClick={() => setOpen(false)}>Careers</Link>
         <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
       </div>
-
     </nav>
   );
 }

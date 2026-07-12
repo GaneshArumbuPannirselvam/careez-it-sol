@@ -1,83 +1,54 @@
-import careersImg from "../assets/careers.jpg";
+import React from 'react';
 
 function Careers() {
-  const perks = [
-    {
-      title: "The Anti-Burnout Promise",
-      desc: "We maintain healthy engineer-to-endpoint ratios. No unrealistic ticket quotas or endless firefighting loops."
+  const focusAreas = [
+    { 
+      title: "Systems Engineering", 
+      desc: "Architecting automated deployments and secure endpoint management.", 
+      stack: "Intune, Autopilot, PowerShell" 
     },
-    {
-      title: "The Certification Ladder",
-      desc: "We invest directly in your professional growth. We pay for your enterprise certification vouchers (Microsoft, CompTIA, Cisco, security credentials) and allocate dedicated weekly study hours."
-    },
-    {
-      title: "Hands-On Tech Diversity",
-      desc: "You will work across modern tech stacks—managing cloud environments, scripting automations, hardening networks, and solving real architectural challenges."
+    { 
+      title: "Operations & Compliance", 
+      desc: "Managing high-priority escalations and maintaining ITIL-aligned compliance.", 
+      stack: "HaloPSA, NinjaOne, RMM" 
     }
   ];
 
-  const values = [
-    { name: "Extreme Ownership", text: "We don't hand off a complex problem. We see it through to absolute resolution." },
-    { name: "Continuous Learning", text: "The threat landscape changes every single week; we stay sharp by learning together." },
-    { name: "Transparent Collaboration", text: "No gatekeeping technical knowledge. We grow by sharing documentation and teaching our peers." }
-  ];
-
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto">
-      {/* Page Header */}
-      <div className="mb-10 max-w-3xl">
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">
-          Build Your Tech Career With Us
-        </h1>
-        <p className="text-lg text-gray-600 leading-relaxed">
-          As CareEZ IT SOL expands, we welcome people who appreciate collaboration, creativity, and customer-focused service. 
-          We provide a nurturing environment where individuals may grow professionally, provide important work, and establish 
-          a long-term career in contemporary IT. We are assembling a group of ethical, inquisitive, and environmentally 
-          conscious technologists. If you have a strong interest in IT, security, and sustainability, we would be delighted 
-          to speak with you.
+    <section className="py-12 px-4 max-w-4xl mx-auto">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Engineering the Future of MSP</h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          At CareEZ IT SOL, we don't just "fix" IT. We engineer sustainable, transparent infrastructure. We are always interested in connecting with builders who share our standards.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
-        {/* Why Join Us Column */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">Why Technicians Love Working Here</h2>
-          <div className="space-y-4">
-            {perks.map((perk, i) => (
-              <div key={i} className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-                <strong className="block text-gray-900 text-base mb-1">{perk.title}</strong>
-                <p className="text-gray-600 text-sm leading-relaxed">{perk.desc}</p>
+      <div className="space-y-6">
+        {focusAreas.map((area, i) => (
+          <div key={i} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{area.title}</h3>
+            <p className="text-gray-600 text-sm mb-4">{area.desc}</p>
+            
+            <div className="pt-4 border-t border-gray-100">
+              <div className="text-[11px] uppercase font-bold text-blue-800">
+                Core Stack: {area.stack}
               </div>
-            ))}
+            </div>
           </div>
+        ))}
+      </div>
 
-          <h2 className="text-2xl font-bold text-gray-800 border-b pb-2 pt-4">Our Core Values</h2>
-          <ul className="space-y-3">
-            {values.map((v, i) => (
-              <li key={i} className="text-sm text-gray-600">
-                <strong className="text-gray-900">{v.name}:</strong> {v.text}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Image & CTA Column */}
-        <div className="space-y-6">
-          <img 
-            src={careersImg} 
-            alt="CareEZ IT SOL Growth and Culture" 
-            className="w-full rounded-xl shadow-lg object-cover max-h-[350px]" 
-          />
-          <div className="p-6 bg-green-50 rounded-xl border border-green-100 text-center">
-            <h3 className="text-lg font-bold text-green-900 mb-2">Ready to grow with us?</h3>
-            <p className="text-green-800 text-sm mb-4">
-              Submit your credentials directly to our team to find out where your skills align with our upcoming client deployments.
-            </p>
-            <p className="text-base font-semibold text-gray-900">
-              Email your resume to: <a href="mailto:careers@careezitsol.com" className="text-blue-600 underline hover:text-blue-800">careers@careezitsol.com</a>
-            </p>
-          </div>
-        </div>
+      <div className="mt-16 p-8 bg-gray-900 text-white rounded-2xl text-center">
+        <h3 className="text-xl font-bold mb-4">Interested in the future of CareEZ?</h3>
+        <p className="text-gray-400 text-sm max-w-lg mx-auto mb-6">
+          While we are not actively hiring at this moment, we are always open to networking with skilled systems engineers. If you align with our technical vision, feel free to drop a line to our engineering lead.
+        </p>
+        <a 
+          href="mailto:info@careezitsol.com?subject=Inquiry: Engineering Opportunities" 
+          className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-lg transition"
+        >
+          Connect with Us
+        </a>
       </div>
     </section>
   );

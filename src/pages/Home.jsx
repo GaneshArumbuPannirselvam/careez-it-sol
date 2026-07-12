@@ -1,7 +1,15 @@
-import { Link } from "react-router-dom";
-import servicesImg from "../assets/Home.jpg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import servicesImg from '../assets/Home.jpg';
 
 function Home() {
+  const trustPoints = [
+    { label: "Microsoft 365 Specialists", sub: "Cloud & Security" },
+    { label: "Canadian Compliance", sub: "PIPEDA Aligned" },
+    { label: "24/7 Monitoring", sub: "Proactive Security" },
+    { label: "Green IT Certified", sub: "LEED Frameworks" }
+  ];
+
   return (
     <div className="max-w-6xl mx-auto py-12 px-4">
       {/* Hero Section */}
@@ -17,12 +25,22 @@ function Home() {
         </Link>
       </div>
 
+      {/* Trust Grid (The "Verify" layer) */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        {trustPoints.map((p, i) => (
+          <div key={i} className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm text-center">
+            <p className="font-bold text-gray-900 text-sm">{p.label}</p>
+            <p className="text-[10px] uppercase text-emerald-700 font-bold tracking-wider">{p.sub}</p>
+          </div>
+        ))}
+      </div>
+
       {/* Quick Pitch Section */}
       <div className="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Enterprise-Grade Operations. Small Business Care.</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Most businesses feel stuck in an endless cycle of technical firefighting and unpredictable bills. CareEZ IT SOL breaks that loop. We monitor your endpoints actively, patch vulnerabilities immediately, and keep system configurations transparently documented.
+            Most businesses feel stuck in an endless cycle of technical firefighting. CareEZ IT SOL breaks that loop. We monitor endpoints actively, patch vulnerabilities immediately, and keep configurations transparently documented.
           </p>
           <Link to="/ManagedServices" className="text-emerald-700 font-semibold hover:underline inline-flex items-center gap-1">
             Explore our service options →
