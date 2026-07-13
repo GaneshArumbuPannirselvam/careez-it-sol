@@ -6,6 +6,20 @@ function Transparency() {
       <h1 className="text-4xl font-extrabold mb-8">Transparency & Compliance</h1>
       
       <div className="space-y-8 leading-relaxed">
+        
+        {/* Trademark & Brand Usage */}
+        <div>
+          <h2 className="text-2xl font-bold mb-3">Trademark & Brand Usage</h2>
+          <p className="text-sm text-gray-500 italic">
+            <strong>Trademark & Brand Disclosure:</strong> All product names, logos, brands, and trademarks 
+            mentioned on this site are the property of their respective owners. CareEZ IT SOL is an 
+            independent technology consultancy. The use of these trademarks and brand names in our articles 
+            and reviews is for identification purposes only and does not imply endorsement by, sponsorship 
+            from, or affiliation with the respective trademark holders.
+          </p>
+        </div>
+
+        {/* Affiliate Disclosure */}
         <div>
           <h2 className="text-2xl font-bold mb-3">Affiliate Disclosure</h2>
           <p>
@@ -13,19 +27,14 @@ function Transparency() {
             To support our mission of providing free, high-quality technical insights to the Toronto business community, 
             some of the links on our website are "affiliate links."
           </p>
-          <p className="mt-4 font-semibold">What this means:</p>
-          <p>
-            When you click on an affiliate link and complete a purchase, we may earn a small commission from the provider. 
-            <strong> This comes at no additional cost to you.</strong>
-          </p>
           <p className="mt-4">
-            <strong>Our Commitment:</strong> Our editorial integrity is our highest priority. We are not influenced by 
-            affiliate partnerships. We only recommend products, software, and services that we have personally vetted 
-            for quality, security, and performance. Our goal is to provide you with the most effective technology solutions 
-            for your business, regardless of any potential commission.
+            <strong>What this means:</strong> When you click on an affiliate link and complete a purchase, we may earn a small commission 
+            from the provider. This comes at no additional cost to you. Our editorial integrity is our highest priority; 
+            we are not influenced by affiliate partnerships.
           </p>
         </div>
 
+        {/* Privacy Policy */}
         <div>
           <h2 className="text-2xl font-bold mb-3">Privacy Policy</h2>
           <p>
@@ -35,6 +44,7 @@ function Transparency() {
           </p>
         </div>
 
+        {/* Cookie Policy */}
         <div>
           <h2 className="text-2xl font-bold mb-3">Cookie Policy</h2>
           <p>

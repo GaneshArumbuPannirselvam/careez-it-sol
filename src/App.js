@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import AboutVision from "./pages/AboutVision"; // Merged Page
+import AboutVision from "./pages/AboutVision";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import ManagedServices from "./pages/ManagedServices";
@@ -18,17 +18,11 @@ function App() {
     <Router>
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <Navbar />
-
         <main style={{ flex: 1, padding: "20px" }} className="bg-gray-50">
           <Routes>
             <Route path="/" element={<Home />} />
-            
-            {/* Merged About & Vision Route */}
             <Route path="/about" element={<AboutVision />} />
-            
-            {/* Redirect old vision path to the new merged page */}
             <Route path="/vision" element={<Navigate to="/about" replace />} />
-            
             <Route path="/ManagedServices" element={<ManagedServices />} />
             <Route path="/ProfessionalServices" element={<ProfessionalServices />} />
             <Route path="/careers" element={<Careers />} />
@@ -37,14 +31,11 @@ function App() {
             <Route path="/insights" element={<Insights />} />
             <Route path="/shoppe" element={<CommunityShoppe />} />
             <Route path="/transparency" element={<Transparency />} />
-            
-            {/* Article Routes */}
-            <Route path="/article/data-silos" element={<ArticleTemplate />} />
-            <Route path="/article/data-security" element={<ArticleTemplate />} />
-            <Route path="/article/sales-automation" element={<ArticleTemplate />} />
+
+            {/* Single dynamic route handles ALL articles automatically */}
+            <Route path="/article/:id" element={<ArticleTemplate />} />
           </Routes>
         </main>
-
         <Footer />
       </div>
     </Router>
