@@ -1,8 +1,12 @@
+/* Force the browser to render text immediately using a fallback system font while Poppins loads */
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Removed the duplicate Google Fonts @import line that was causing render-blocking delays */
 
 :root {
   --primary: #0A3F1F;
