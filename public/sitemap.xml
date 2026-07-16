@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://careezitsol.com</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://careezitsol.comabout</loc>
+    <loc>https://careezitsol.com/about</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://careezitsol.comManagedServices</loc>
+    <loc>https://careezitsol.com/ManagedServices</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://careezitsol.comProfessionalServices</loc>
+    <loc>https://careezitsol.com/ProfessionalServices</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://careezitsol.comGreenServices</loc>
+    <loc>https://careezitsol.com/GreenServices</loc>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://careezitsol.cominsights</loc>
+    <loc>https://careezitsol.com/insights</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://careezitsol.comtransparency</loc>
+    <loc>https://careezitsol.com/transparency</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://careezitsol.comcontact</loc>
+    <loc>https://careezitsol.com/contact</loc>
     <priority>0.80</priority>
   </url>
 </urlset>
