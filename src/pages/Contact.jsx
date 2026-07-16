@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -16,11 +18,17 @@ function Contact() {
       `Users: ${formData.userCount}\n` +
       `Concern: ${formData.primaryConcern}\n`
     );
-    window.location.href = `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${MY_EMAIL}?subject=${subject}?&body=${body}`;
   };
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Request an IT Assessment | CareEZ IT Sol Toronto</title>
+        <meta name="description" content="Contact CareEZ IT Sol to book your professional small business IT infrastructure assessment in Toronto and the GTA. Identify network vulnerabilities and check PIPEDA compliance." />
+      </Helmet>
+
       <div className="text-center mb-10">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-3">Request Your IT Assessment</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -31,7 +39,6 @@ function Contact() {
       <div className="grid md:grid-cols-5 gap-8 items-start">
         {/* FORM */}
         <form onSubmit={handleSubmit} className="md:col-span-3 bg-white p-8 rounded-xl shadow-sm border border-gray-100 space-y-6">
-          {/* ... (Keep your existing form fields here) ... */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1">Full Name *</label>

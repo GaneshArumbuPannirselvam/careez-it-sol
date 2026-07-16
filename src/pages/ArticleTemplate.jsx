@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { articles } from '../data/articles.jsx';
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function ArticleTemplate() {
   const { id } = useParams();
@@ -9,6 +11,12 @@ function ArticleTemplate() {
   if (!article) {
     return (
       <div className="py-20 px-4 max-w-4xl mx-auto text-center">
+        {/* Dynamic metadata fallback if an article link is broken */}
+        <Helmet>
+          <title>Article Not Found | CareEZ IT Sol</title>
+          <meta name="description" content="The requested IT insight or cybersecurity article could not be found." />
+        </Helmet>
+
         <h1 className="text-3xl font-bold text-gray-900 mb-4">
           Article Not Found
         </h1>
@@ -24,6 +32,12 @@ function ArticleTemplate() {
 
   return (
     <article className="py-12 px-4 max-w-4xl mx-auto">
+      {/* 2. Fully dynamic metadata blocks tied directly to your articles array */}
+      <Helmet>
+        <title>{article.title} | CareEZ IT Sol Insights</title>
+        <meta name="description" content={`Read our expert guide on ${article.title}. Technical insights published by the CareEZ IT Sol engineering team.`} />
+      </Helmet>
+
       {/* Back Link */}
       <div className="mb-8">
         <Link to="/insights" className="text-blue-600 text-sm font-medium hover:underline">

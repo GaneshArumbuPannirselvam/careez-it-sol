@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import servicesImg from "../assets/ProfessionalServices.jpg";
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function ProfessionalServices() {
   const navigate = useNavigate();
@@ -13,6 +15,12 @@ function ProfessionalServices() {
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Professional IT Consulting & Project Management | CareEZ IT Sol Toronto</title>
+        <meta name="description" content="Accelerate your technology infrastructure with strategic IT consulting from CareEZ IT Sol. We handle cloud migrations, corporate network redesigns, access management, and hardware procurement in Toronto." />
+      </Helmet>
+
       <h1 className="text-4xl font-extrabold mb-10">Strategic IT Consulting</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-4">
@@ -29,7 +37,7 @@ function ProfessionalServices() {
         </div>
         <div className="flex flex-col gap-6">
           <img src={servicesImg} className="rounded-xl h-[300px] object-cover" alt="Consulting" />
-          <button onClick={() => navigate('/contact')} className="bg-gray-900 text-white font-bold py-3 rounded-xl">
+          <button onClick={() => navigate('/contact')} className="bg-gray-900 text-white font-bold py-3 rounded-xl hover:bg-black transition-colors">
             Scope Your Project
           </button>
         </div>
@@ -37,4 +45,5 @@ function ProfessionalServices() {
     </section>
   );
 }
+
 export default ProfessionalServices;

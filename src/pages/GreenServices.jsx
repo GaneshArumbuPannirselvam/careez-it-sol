@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import greenImg from "../assets/GreenInfrastructure.jpg";
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function GreenServices() {
   const navigate = useNavigate();
@@ -33,6 +35,12 @@ function GreenServices() {
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Green IT Consulting & LEED Compliance | CareEZ IT Sol Toronto</title>
+        <meta name="description" content="Optimize your IT infrastructure for environmental sustainability. CareEZ IT Sol offers data center power optimization, certified e-waste lifecycle management, and LEED project documentation in Toronto." />
+      </Helmet>
+
       <div className="mb-10 max-w-3xl">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Bridging Tech & Sustainability</h1>
         <p className="text-lg text-gray-600">Optimizing electronic lifecycles and building energy footprints to meet LEED frameworks.</p>

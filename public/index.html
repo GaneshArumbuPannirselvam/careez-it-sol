@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#0B5FFF" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>CareEZ IT Sol | Managed IT, Cybersecurity & Green IT Consulting in Toronto</title>
+    <meta name="description" content="CareEZ IT Sol provides managed IT support, cybersecurity, network solutions, and green IT consulting for small and medium businesses in Toronto and the GTA." />
+    <meta name="keywords" content="managed IT services Toronto, IT support GTA, cybersecurity consulting, green IT, network solutions, small business IT" />
+    <meta name="author" content="CareEZ IT Sol" />
+    <link rel="canonical" href="https://careezitsol.com" />
+
+    <!-- Open Graph (Absolute paths for live server compliance) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CareEZ IT Sol" />
+    <meta property="og:title" content="CareEZ IT Sol | Managed IT & Cybersecurity for Toronto SMBs" />
+    <meta property="og:description" content="Managed IT support, cybersecurity, network solutions, and green IT consulting for Toronto-area small businesses." />
+    <meta property="og:url" content="https://careezitsol.com" />
+    <meta property="og:image" content="https://careezitsol.comog-image.jpg" />
+
+    <!-- Twitter/X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CareEZ IT Sol | Managed IT & Cybersecurity for Toronto SMBs" />
+    <meta name="twitter:description" content="Managed IT support, cybersecurity, network solutions, and green IT consulting for Toronto-area small businesses." />
+    <meta name="twitter:image" content="https://careezitsol.comog-image.jpg" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured Data: Formatted with complete, active production URLs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "CareEZ IT Sol",
+      "url": "https://careezitsol.com",
+      "description": "Managed IT support, cybersecurity, network solutions, and green IT consulting for small and medium businesses.",
+      "areaServed": "Toronto, Ontario, Canada",
+      "sameAs": [
+        "https://linkedin.com",
+        "https://facebook.com"
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Fallback text structure for basic compliance crawlers -->
+    <noscript>
+      <h1>CareEZ IT Sol</h1>
+      <p>CareEZ IT Sol provides premium managed IT support, enterprise-grade cybersecurity solutions, business network engineering, and green IT efficiency consulting for small and medium businesses throughout Toronto and the Greater Toronto Area (GTA).</p>
+      <p>Please enable JavaScript in your browser to view our complete interactive platform.</p>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

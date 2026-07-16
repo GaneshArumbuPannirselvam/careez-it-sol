@@ -1,4 +1,6 @@
 import React from 'react';
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function CommunityShoppe() {
   // PASTE YOUR LINK BELOW INSIDE THE QUOTES
@@ -12,6 +14,12 @@ function CommunityShoppe() {
 
   return (
     <section className="py-12 px-4 max-w-4xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Community Shoppe | Affordable Local IT Hardware in Toronto</title>
+        <meta name="description" content="Browse the CareEZ Community Shoppe for affordable wireless keyboards, mice, and noise-cancelling headphones. Free local delivery in Toronto and senior citizen discounts." />
+      </Helmet>
+
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4">CareEZ Community Shoppe</h1>
         <p className="text-lg text-gray-600 mb-6">Affordable hardware, delivered to your door. Free delivery for local residents, with an extra 10% discount for our senior citizens.</p>

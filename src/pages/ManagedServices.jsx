@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import servicesImg from "../assets/ManagedServices.jpg";
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function ManagedServices() {
   const navigate = useNavigate();
@@ -13,6 +15,12 @@ function ManagedServices() {
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Managed IT Services & 24/7 Helpdesk | CareEZ IT Sol Toronto</title>
+        <meta name="description" content="Secure your endpoints and scale your business infrastructure with CareEZ IT Sol. We provide proactive 24/7 network monitoring, Microsoft Intune management, and business disaster recovery in Toronto." />
+      </Helmet>
+
       <h1 className="text-4xl font-extrabold mb-10">Managed IT Services</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-4">
@@ -29,7 +37,7 @@ function ManagedServices() {
         </div>
         <div className="flex flex-col gap-6">
           <img src={servicesImg} className="rounded-xl h-[300px] object-cover" alt="Managed IT" />
-          <button onClick={() => navigate('/contact')} className="bg-blue-600 text-white font-bold py-3 rounded-xl">
+          <button onClick={() => navigate('/contact')} className="bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors">
             Get an Operational Assessment
           </button>
         </div>
@@ -37,4 +45,5 @@ function ManagedServices() {
     </section>
   );
 }
+
 export default ManagedServices;

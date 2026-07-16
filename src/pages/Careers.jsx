@@ -1,4 +1,6 @@
 import React from 'react';
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function Careers() {
   const focusAreas = [
@@ -16,6 +18,12 @@ function Careers() {
 
   return (
     <section className="py-12 px-4 max-w-4xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Careers at CareEZ IT Sol | Join Our Toronto Systems Engineering Team</title>
+        <meta name="description" content="Explore future IT opportunities at CareEZ IT Sol. We connect with skilled systems engineers and IT professionals in Toronto and the GTA." />
+      </Helmet>
+
       <div className="text-center mb-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Engineering the Future of MSP</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">

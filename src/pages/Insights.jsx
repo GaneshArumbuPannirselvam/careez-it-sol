@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { articles } from '../data/articles'; // Make sure this path correctly points to your articles.js file
+import { articles } from '../data/articles.jsx'; // Make sure this path correctly points to your articles.js file
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function Insights() {
   const categories = ["All", "Tutorials", "Reviews", "Buying Guides", "Recommended Products"];
@@ -13,6 +15,12 @@ function Insights() {
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>IT Insights, Tech Tutorials & Buying Guides | CareEZ IT Sol</title>
+        <meta name="description" content="Explore expert IT resources, cybersecurity tutorials, software reviews, and hardware buying guides tailored for small and medium businesses from the CareEZ engineering team." />
+      </Helmet>
+
       {/* Page Header */}
       <div className="mb-10 max-w-3xl">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">

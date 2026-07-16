@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import servicesImg from '../assets/Home.jpg';
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function Home() {
   const trustPoints = [
@@ -12,6 +14,12 @@ function Home() {
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-4">
+      {/* 2. Correct metadata insertion point inside the parent container */}
+      <Helmet>
+        <title>CareEZ IT Sol | Managed IT & Cybersecurity for Toronto SMBs</title>
+        <meta name="description" content="Managed IT support, cybersecurity, and green IT consulting built for Toronto small businesses." />
+      </Helmet>
+
       {/* Hero Section */}
       <div className="text-center py-16 bg-gradient-to-br from-green-900 to-emerald-950 text-white rounded-2xl p-8 mb-12 shadow-xl">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">

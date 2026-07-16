@@ -1,8 +1,17 @@
 import React from 'react';
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function Transparency() {
   return (
     <section className="py-12 px-4 max-w-4xl mx-auto text-gray-800">
+      {/* 2. Compliance metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>Transparency, Privacy Policy & Affiliate Disclosure | CareEZ IT Sol</title>
+        <meta name="description" content="Read CareEZ IT Sol's official compliance documentation, including our affiliate disclosure, privacy policy, cookie policy, and trademark usage terms." />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       <h1 className="text-4xl font-extrabold mb-8">Transparency & Compliance</h1>
       
       <div className="space-y-8 leading-relaxed">

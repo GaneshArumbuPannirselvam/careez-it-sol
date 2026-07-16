@@ -1,6 +1,8 @@
 import React from 'react';
 import aboutImg from "../assets/about.jpg"; 
 import visionImg from "../assets/vision.jpg"; 
+// 1. Correct import position for the Helmet tool
+import { Helmet } from "react-helmet-async";
 
 function AboutVision() {
   const promises = [
@@ -16,6 +18,12 @@ function AboutVision() {
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto space-y-20">
+      {/* 2. Correct metadata insertion point inside the parent section container */}
+      <Helmet>
+        <title>About Our Vision | Green IT & Managed Engineering in Toronto</title>
+        <meta name="description" content="Discover CareEZ IT Sol's core story and commitment to sustainable technical frameworks. We combine top-tier cybersecurity with energy-efficient Green IT models." />
+      </Helmet>
+
       {/* SECTION 1: ABOUT */}
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
