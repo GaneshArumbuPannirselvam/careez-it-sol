@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import logo from "../assets/logo.png"; // use your uploaded logo
+import logo from "../assets/logo.jpg"; // use your uploaded logo
 
 function Header() {
   return (
