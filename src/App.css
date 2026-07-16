@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+/* Removed the duplicate Google Fonts @import line that was causing render-blocking delays */
 
 :root {
   --primary: #0A3F1F;
@@ -15,7 +15,8 @@
   box-sizing: border-box; 
   margin: 0; 
   padding: 0; 
-  font-family: 'Inter', sans-serif; 
+  /* Switched base typography from Inter to Poppins to match your index.html configurations */
+  font-family: 'Poppins', sans-serif; 
 }
 
 body { 
