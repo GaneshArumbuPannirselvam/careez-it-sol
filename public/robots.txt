@@ -1,3 +1,11 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Allow: /insights
+Allow: /transparency
+
+# Exclude internal asset bundles
+Disallow: /static/
+Disallow: /404
+
+# Road map link for the crawler engines
+Sitemap: https://careezitsol.com
