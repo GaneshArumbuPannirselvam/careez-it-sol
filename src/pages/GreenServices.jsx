@@ -9,7 +9,7 @@ function GreenServices() {
   const greenServicesList = [
     { 
       title: "Green Data Center & Cloud Optimization", 
-      desc: "Audit infrastructure to minimize cooling and power overhead.", 
+      desc: "Audit architecture to minimize cooling and power overhead.", 
       stack: "PUE/CUE Monitoring, Cloud Fabrics", 
       expert: "LEED Energy & Atmosphere (EA) Credit Optimization." 
     },
@@ -35,15 +35,21 @@ function GreenServices() {
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
-      {/* 2. Correct metadata insertion point inside the parent section container */}
+      {/* 2. Embedded local search criteria wrappers */}
       <Helmet>
         <title>Green IT Consulting & LEED Compliance | CareEZ IT Sol Toronto</title>
         <meta name="description" content="Optimize your IT infrastructure for environmental sustainability. CareEZ IT Sol offers data center power optimization, certified e-waste lifecycle management, and LEED project documentation in Toronto." />
       </Helmet>
 
+      {/* Visible Heading Layer */}
       <div className="mb-10 max-w-3xl">
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Bridging Tech & Sustainability</h1>
-        <p className="text-lg text-gray-600">Optimizing electronic lifecycles and building energy footprints to meet LEED frameworks.</p>
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+          Sustainable LEED Green IT Framework & Architecture
+        </h1>
+        <p className="text-lg text-gray-600 leading-relaxed">
+          Optimizing corporate electronic lifecycles, tracking carbon overhead, and designing eco-efficient 
+          building energy footprints to satisfy technical Canadian sustainability standards.
+        </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -61,10 +67,13 @@ function GreenServices() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <img src={greenImg} className="rounded-xl h-[300px] object-cover" alt="Green IT" />
+          <img src={greenImg} className="rounded-xl h-[300px] object-cover shadow-md" alt="Green IT Infrastructure Facility" />
           <div className="p-8 bg-emerald-900 text-white rounded-xl">
             <h3 className="text-xl font-bold mb-3">Ready for the Green Standard?</h3>
-            <p className="text-emerald-100 text-sm mb-6">Uncover power inefficiencies and align your IT framework with LEED certification goals.</p>
+            <p className="text-emerald-100 text-sm mb-6">
+              Uncover hidden computing power inefficiencies, reduce local electronic waste footprint streams, 
+              and align your corporate data center frameworks with strict LEED certification goals.
+            </p>
             <button onClick={() => navigate('/contact')} className="w-full bg-[#FC7713] hover:bg-[#e26205] text-white font-bold py-3 rounded-lg transition shadow-md">
               Schedule Sustainable IT Review
             </button>
