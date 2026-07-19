@@ -13,7 +13,7 @@ function Home() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-4">
+    <div className="max-w-6xl mx-auto py-12 px-4 text-left">
       {/* 2. Correct metadata insertion point inside the parent container */}
       <Helmet>
         <title>CareEZ IT Sol | Managed IT & Cybersecurity for Toronto SMBs</title>
@@ -44,7 +44,7 @@ function Home() {
       </div>
 
       {/* Quick Pitch Section */}
-      <div className="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <div className="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-16">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Enterprise-Grade Operations. Small Business Care.</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -58,6 +58,29 @@ function Home() {
           <img src={servicesImg} alt="Managed Technical Support Services" className="w-full h-64 object-cover rounded-xl shadow-md" />
         </div>
       </div>
+
+     {/* ITSM Callout Block */}
+<section className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-left">
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div>
+      <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Enterprise Tools</span>
+      <h3 className="text-2xl font-bold text-gray-900 mt-1">Still Running Support Out of a Shared Inbox?</h3>
+      <p className="text-gray-600 text-sm mt-1 max-w-xl">
+        We took a hands-on look at ManageEngine ServiceDesk Plus — what it does well, where it's clunky,
+        and whether it's actually worth it for a growing Toronto business.
+      </p>
+    </div>
+    <div>
+      <Link
+        to="/servicedesk-plus"
+        className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-sm py-3.5 px-6 rounded-xl transition-colors shadow-xs cursor-pointer whitespace-nowrap"
+      >
+        Read the Full Review <span className="ml-2">→</span>
+      </Link>
+    </div>
+  </div>
+</section>
+      
     </div>
   );
 }

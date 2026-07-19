@@ -13,11 +13,15 @@ import ArticleTemplate from "./pages/ArticleTemplate";
 import Transparency from "./pages/Transparency";
 import CommunityShoppe from './pages/CommunityShoppe';
 
+// 1. Imported the new ManageEngine landing page from your pages folder
+import ServiceDeskPlusLanding from "./pages/ServiceDeskPlusLanding";
+
 function App() {
   return (
     <Router>
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <Navbar />
+        {/* Note: Kept your original bg-gray-50 layout styles perfectly intact */}
         <main style={{ flex: 1, padding: "20px" }} className="bg-gray-50">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,6 +35,9 @@ function App() {
             <Route path="/insights" element={<Insights />} />
             <Route path="/shoppe" element={<CommunityShoppe />} />
             <Route path="/transparency" element={<Transparency />} />
+
+            {/* 2. Added the dedicated, clean route for your affiliate application check */}
+            <Route path="/servicedesk-plus" element={<ServiceDeskPlusLanding />} />
 
             {/* Single dynamic route handles ALL articles automatically */}
             <Route path="/article/:id" element={<ArticleTemplate />} />

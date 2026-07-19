@@ -181,7 +181,7 @@ export const articles = [
   {
     id: "hostedscan-review",
     title: "HostedScan: An Independent Look at Vulnerability Scanning for Ontario SMBs",
-    date: "July 20, 2026",
+    date: "July 15, 2026",
     category: "Reviews",
     summary: "An independent look at HostedScan's vulnerability scanning platform — what it checks, how easy it is to use, and whether it suits Ontario small businesses managing their own security.",
     content: (
@@ -207,7 +207,7 @@ export const articles = [
   {
     id: "parallels-daas-review",
     title: "Parallels for MSPs: An Independent Look at Desktop-as-a-Service for Toronto Teams",
-    date: "July 22, 2026",
+    date: "July 12, 2026",
     category: "Reviews",
     summary: "An independent look at Parallels' Desktop-as-a-Service offering for MSPs — covering who it suits, how it's structured, and whether it makes sense for Toronto businesses managing hybrid workforces.",
     content: (
@@ -341,7 +341,7 @@ export const articles = [
   {
     id: "hackerdna-cybersecurity",
     title: "HackerDNA: A Cybersecurity Training Platform Worth Knowing About",
-    date: "July 21, 2026",
+    date: "July 07, 2026",
     category: "Recommended Products",
     summary: "HackerDNA takes a practical, scenario-based approach to cybersecurity training — here's why it stands out from the compliance-checkbox platforms most Ontario SMB employees quietly ignore.",
     content: (
@@ -369,7 +369,7 @@ export const articles = [
   {
     id: "partnerstack-for-msps",
     title: "PartnerStack: A B2B Affiliate Network Built for IT and SaaS Professionals",
-    date: "July 23, 2026",
+    date: "July 15, 2026",
     category: "Recommended Products",
     summary: "PartnerStack hosts B2B SaaS affiliate programs relevant to IT professionals — here's an independent look at how the platform works and who it suits.",
     content: (
@@ -395,7 +395,7 @@ export const articles = [
   {
     id: "impact-network-review",
     title: "Impact.com: A Performance Marketing Network for Tech and IT Content Creators",
-    date: "July 25, 2026",
+    date: "July 15, 2026",
     category: "Recommended Products",
     summary: "Impact hosts major SaaS and DTC brands relevant to tech audiences. Here's an independent look at how the platform works and whether it suits IT professionals building content-based income.",
     content: (
@@ -420,7 +420,7 @@ export const articles = [
   {
     id: "gfi-recommended",
     title: "GFI Software: An Independent Perspective for Ontario MSPs Evaluating Security Suites",
-    date: "July 26, 2026",
+    date: "July 06, 2026",
     category: "Recommended Products",
     summary: "An independent look at GFI Software for Ontario MSPs — covering what the platform does, who it suits, and what to evaluate before considering it for your client environments.",
     content: (
@@ -446,7 +446,7 @@ export const articles = [
   {
     id: "parallels-recommended",
     title: "Parallels MSP Program: An Independent Look at DaaS for Hybrid Toronto Teams",
-    date: "July 27, 2026",
+    date: "July 07, 2026",
     category: "Recommended Products",
     summary: "An independent look at Parallels' Desktop-as-a-Service offering for MSPs — covering the use case, delivery model, and what Ontario IT providers should evaluate before recommending it to clients.",
     content: (
@@ -538,4 +538,93 @@ export const articles = [
       </>
     )
   },
+  {
+  id: "manageengine-servicedesk-plus-review",
+  title: "ManageEngine ServiceDesk Plus: An Independent Look at ITSM for Toronto SMBs",
+  date: "July 18, 2026",
+  category: "Reviews",
+  summary: "An independent look at ManageEngine ServiceDesk Plus — how it handles ticket routing, SLA management, and asset tracking, and whether it fits small IT teams in the Toronto/GTA market.",
+  content: (
+    <>
+      <p>Most small businesses don't lose track of IT issues because their team lacks skill — they lose track because tickets live in email threads, Slack DMs, and whatever the last person happened to write on a whiteboard. A dedicated ITSM platform exists specifically to close that gap, and ServiceDesk Plus is one of the more established options in that space.</p>
+
+      <h2>What It Covers</h2>
+      <p>ServiceDesk Plus centers on ticket management, but the practical value shows up in the surrounding structure — SLA rules that auto-escalate overdue tickets, a built-in asset tracking module, and a self-service portal so staff can log issues without a phone call or a hallway conversation.</p>
+
+      <h2>SLA and Escalation Handling</h2>
+      <p>Configurable SLA policies let you define response and resolution targets by priority or category, with automatic escalation when a ticket is at risk of breaching. For businesses that need to demonstrate consistent turnaround — client-facing IT providers especially — this turns "we usually respond quickly" into something you can actually report on.</p>
+
+      <h2>Asset Tracking</h2>
+      <p>The asset management module ties hardware and software inventory directly to tickets, so a recurring issue on a specific device shows up in context rather than as an isolated, disconnected complaint each time it's reported.</p>
+
+      <h2>Who It Suits</h2>
+      <p>Based on our evaluation, ServiceDesk Plus is a strong fit for Ontario SMBs in the 10–150 seat range that have outgrown an inbox-based support process but don't need — or can't justify the cost of — a full enterprise ITSM platform. It's less suited to businesses under 5–10 people, where the structure likely outweighs the actual ticket volume.</p>
+
+      <h2>What to Evaluate Before Adopting</h2>
+      <p>Initial SLA and workflow configuration takes real setup time — this isn't a tool you turn on and walk away from. Businesses should budget a few hours of setup, and ideally involve whoever will be triaging tickets day to day, before rolling it out to the full team.</p>
+
+      <div className="my-10 p-6 bg-green-50 border-l-4 border-[#44712e]">
+        <h3 className="text-[#44712e] font-bold">Our Perspective</h3>
+        <p>This article reflects our independent assessment of ManageEngine ServiceDesk Plus based on hands-on evaluation and our experience in ITSM and incident management within Ontario government and enterprise environments. We are currently in the ManageEngine affiliate application process and have no active commercial relationship with ManageEngine at this time.</p>
+        {/* AFFILIATE LINK PLACEHOLDER — add once ManageEngine affiliate approval is confirmed */}
+      </div>
+    </>
+  )
+},
+
+{
+    id: "essential-it-checklist-smb",
+    title: "The Essential IT Checklist for Growing Toronto Businesses",
+    summary: "A production-ready infrastructure roadmap covering endpoint security baselines, Cloud Solution Provider (CSP) integration, and the 3-2-1 backup rules required to protect local operations.",
+    category: "Tutorials",
+    date: "July 15, 2026",
+    readTime: "6 min read",
+    content: (
+      <>
+        <p className="mb-4">For growing small-to-medium businesses across the Greater Toronto Area (GTA), scaling up operations without updating infrastructure is an operational hazard. When your team expands from a few local seats to a hybrid workforce, basic ad-hoc file sharing and residential-grade security configurations stop cutting it.</p>
+        
+        <h2 className="text-xl font-bold text-gray-100 mt-6 mb-3">1. Identity Isolation via Microsoft Entra ID</h2>
+        <p className="mb-4">Using local device accounts or scattered personal credentials creates massive compliance blind spots. The first step in a professional infrastructure rollout is implementing unified identity management through a clean Microsoft Entra ID tenant structure. This allows administrators to enforce explicit authentication parameters across all endpoints from day one.</p>
+        
+        <h2 className="text-xl font-bold text-gray-100 mt-6 mb-3">2. Enforcement of Security Defaults and MFA</h2>
+        <p className="mb-4">Ransomware attacks in Ontario continuously target unhardened perimeter access. Enabling baseline security defaults inside your cloud administration hub enforces Multi-Factor Authentication (MFA) across your entire staff directory. This single structural configuration mitigates a massive percentage of opportunistic credential-stuffing exploits.</p>
+
+        <h2 className="text-xl font-bold text-gray-100 mt-6 mb-3">3. Executing the 3-2-1 Backup Strategy</h2>
+        <p className="mb-4">A backup policy is only as reliable as its last verifiable restore test. True disaster recovery requires maintaining three copies of core business data, across two distinct storage mediums, with at least one target kept securely offsite and fully isolated from the main production network tenant.</p>
+        
+        <div className="my-10 p-6 bg-indigo-950/40 border-l-4 border-indigo-500 rounded-r-xl">
+          <h3 className="text-indigo-400 font-bold mb-1">Architectural Advisory</h3>
+          <p className="text-sm text-gray-300 italic">
+            For teams requiring rigorous modern workplace protection and device provisioning rules, migrating to an licensing infrastructure like Microsoft 365 Business Premium combines local advanced device management with strict productivity compliance frameworks perfectly.
+          </p>
+        </div>
+      </>
+    )
+  },
+  {
+    id: "m365-vs-google-workspace-2026",
+    title: "Microsoft 365 vs. Google Workspace: A Comprehensive 2026 Enterprise Evaluation",
+    summary: "An objective operational analysis comparing multi-tenant device management, advanced cloud identity compliance, and scalable security architectures for remote-first corporate environments.",
+    category: "Reviews",
+    date: "June 18, 2026",
+    readTime: "8 min read",
+    content: (
+      <>
+        <p className="mb-4">Selecting a foundational cloud productivity framework is one of the most critical structural choices an expanding enterprise can make. While both Microsoft 365 and Google Workspace offer robust baseline communication and document collaboration features, their architectural approaches to system compliance and endpoint control diverge heavily.</p>
+        
+        <h2 className="text-xl font-bold text-gray-100 mt-6 mb-3">Advanced Mobile Device Management (MDM)</h2>
+        <p className="mb-4">When managing a hybrid workforce, device tracking becomes a high priority. Microsoft 365 (via native Microsoft Intune integration) provides deep, granular control over local registries, automated operating system patching, and hardware configurations across Windows, macOS, and mobile operating profiles. Google Workspace's MDM alternative is highly functional for browser-centric cloud ecosystems but often requires supplemental third-party tools when dealing with complex, legacy local application profiles.</p>
+        
+        <h2 className="text-xl font-bold text-gray-100 mt-6 mb-3">Regulatory Compliance and Identity Governance</h2>
+        <p className="mb-4">For firms operating inside regulated verticals like legal, finance, or public service sectors across Canada, data residency and information protection standards are strict. The advanced data loss prevention (DLP) engines and litigation holds available inside the Microsoft ecosystem offer direct alignment with complex corporate storage and governance mandates seamlessly.</p>
+        
+        <div className="my-10 p-6 bg-indigo-950/40 border-l-4 border-indigo-500 rounded-r-xl">
+          <h3 className="text-indigo-400 font-bold mb-1">Deployment Takeaway</h3>
+          <p className="text-sm text-gray-300 italic">
+            Organizations tracking heavily toward browser-only infrastructure often gravitate toward alternative platforms, but businesses scaling up dedicated endpoint systems, local client application requirements, and strict zero-trust operational pipelines consistently see higher ROI deploying a hardened Microsoft cloud architecture.
+          </p>
+        </div>
+      </>
+    )
+  }
 ];
