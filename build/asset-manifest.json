@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd19b9fd.css",
-    "main.js": "/static/js/main.d5ddf1b8.js",
+    "main.css": "/static/css/main.e17b22a5.css",
+    "main.js": "/static/js/main.cbc13ad1.js",
     "static/media/vision.jpg": "/static/media/vision.173f789eae4db1e52ee6.jpg",
     "static/media/logo.png": "/static/media/logo.e90da4791e1d478a4b16.png",
     "static/media/GreenInfrastructure.jpg": "/static/media/GreenInfrastructure.14e80abbed64d327f28a.jpg",
     "static/media/ProfessionalServices.jpg": "/static/media/ProfessionalServices.237bd1e0c0d0c2a91eff.jpg",
     "static/media/ManagedServices.jpg": "/static/media/ManagedServices.031d55e4ee9a1984b965.jpg",
+    "static/media/ServiceDeskPlus.jpg": "/static/media/ServiceDeskPlus.c66abee014349ed6433e.jpg",
     "static/media/Home.jpg": "/static/media/Home.49a2c124a36914f78a30.jpg",
     "index.html": "/index.html",
-    "main.dd19b9fd.css.map": "/static/css/main.dd19b9fd.css.map",
-    "main.d5ddf1b8.js.map": "/static/js/main.d5ddf1b8.js.map"
+    "main.e17b22a5.css.map": "/static/css/main.e17b22a5.css.map",
+    "main.cbc13ad1.js.map": "/static/js/main.cbc13ad1.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd19b9fd.css",
-    "static/js/main.d5ddf1b8.js"
+    "static/css/main.e17b22a5.css",
+    "static/js/main.cbc13ad1.js"
   ]
 }

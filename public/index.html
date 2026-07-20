@@ -3,32 +3,62 @@
   <head>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0B5FFF" />
+
     <title>CareEZ IT Sol | Managed IT, Cybersecurity & Green IT Consulting in Toronto</title>
     <meta name="description" content="CareEZ IT Sol provides managed IT support, cybersecurity, network solutions, and green IT consulting for small and medium businesses in Toronto and the GTA." />
     <link rel="canonical" href="https://careezitsol.com" />
-    <!-- Sitemap integration for audit compliance -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://careezitsol.comsitemap.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://careezitsol.com" />
+
     <!-- Open Graph & Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CareEZ IT Sol | Managed IT & Cybersecurity" />
-    <meta property="og:image" content="https://careezitsol.comog-image.jpg" />
+    <meta property="og:image" content="https://careezitsol.com" />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ITService",
-      "name": "CareEZ IT Sol",
-      "url": "https://careezitsol.com",
-      "sameAs": ["https://linkedin.com"]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "ITService",
+        "name": "CareEZ",
+        "url": "https://careezitsol.com",
+        "areaServed": "Toronto, Ontario, Canada",
+        "sameAs": ["https://linkedin.com"]
+      }
+    </script>
+
+    <!-- Impact.com Publisher Tag (Correct + Verified) -->
+    <script type="text/javascript">
+      (function(i,m,p,a,c,t){
+        c.ire_o = p;
+        c[p] = c[p] || function(){
+          (c[p].a = c[p].a || []).push(arguments);
+        };
+        t = a.createElement(m);
+        var z = a.getElementsByTagName(m)[0];
+        t.async = 1;
+        t.src = i;
+        z.parentNode.insertBefore(t, z);
+      })(
+        "https://utt.impactcdn.com/P-A7478557-ad61-4185-8bec-589c6219f97b1.js",
+        "script",
+        "impactStat",
+        document,
+        window
+      );
+
+      impactStat("trackImpression");
     </script>
   </head>
+
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
 </html>

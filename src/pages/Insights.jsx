@@ -107,14 +107,14 @@ function Insights() {
           </div>
 
           {/* Clean Bottom Navigation Footer */}
-          <div className="mt-12 pt-6 border-t border-gray-100">
+          {/*<div className="mt-12 pt-6 border-t border-gray-100">
             <button 
               onClick={() => setActiveCategory("All")}
               className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               ← Back to All Insights
             </button>
-          </div>
+          </div>*/}
         </div>
       ) : (
         <div className="text-center py-16 bg-white rounded-xl border border-gray-100 mb-12">
