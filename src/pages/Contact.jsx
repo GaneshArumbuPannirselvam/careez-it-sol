@@ -18,7 +18,8 @@ function Contact() {
       `Users: ${formData.userCount}\n` +
       `Concern: ${formData.primaryConcern}\n`
     );
-    window.location.href = `mailto:${MY_EMAIL}?subject=${subject}?&body=${body}`;
+    // FIXED: Removed the extra question mark before the body parameter to ensure proper email client parsing
+    window.location.href = `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -96,9 +97,19 @@ function Contact() {
           </div>
           
           <div className="p-6 bg-blue-50 border border-blue-100 rounded-xl">
-            <h3 className="font-bold text-blue-900">Direct Intake</h3>
-            <p className="text-sm text-blue-700 mb-2">Need a faster response?</p>
-            <a href="tel:+14165550123" className="font-bold text-blue-900 underline">+1 (416) 555-0123</a>
+            <h3 className="font-bold text-blue-900 mb-2">Direct Intake</h3>
+            <p className="text-sm text-blue-700 mb-3">Need a faster response?</p>
+            {/* UPDATED CONTENT AREA: Displaying both phone and clickable secure business email link */}
+            <div className="space-y-2">
+              <div>
+                <span className="text-xs text-blue-600 block uppercase font-extrabold tracking-wider">Call Us:</span>
+                <a href="tel:+14165550123" className="font-bold text-blue-900 hover:text-blue-700 underline block text-lg">+1 (416) 555-0123</a>
+              </div>
+              <div className="pt-2 border-t border-blue-100">
+                <span className="text-xs text-blue-600 block uppercase font-extrabold tracking-wider">Email Us:</span>
+                <a href="mailto:info@careezitsol.com" className="font-bold text-blue-900 hover:text-blue-700 underline block text-base">info@careezitsol.com</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
