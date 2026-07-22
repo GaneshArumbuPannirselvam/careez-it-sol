@@ -4,5 +4,13 @@
     "exclude": [
       "/google*.html"
     ]
+  },
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; require-trusted-types-for 'script'; frame-ancestors 'self';",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
   }
 }

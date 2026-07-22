@@ -56,11 +56,22 @@ body {
 
 .logo-icon { width: 55px; }
 
+/* FIXED: Confirmed all formatting blocks close correctly to ensure zero build errors */
 .logo-text { 
-  font-weight: 700; 
-  font-size: 1.6rem; 
+  font-family: 'Lexend Deca', 'Outfit', sans-serif; /* Implements the clean structural Futura look */
+  font-size: 1.8rem; 
   color: var(--primary); 
-  letter-spacing: 1.5px;
+  letter-spacing: -0.5px;            /* Tightens letters for a high-end corporate wordmark feel */
+  display: flex;
+  align-items: center;
+}
+
+.logo-text .brand-light {
+  font-weight: 300;                  /* Makes 'Care' slim, clean, and modern */
+}
+
+.logo-text .brand-bold {
+  font-weight: 900;                  /* Makes 'EZ' extra thick, powerful, and distinctive */
 }
 
 .nav-links { 
@@ -146,3 +157,15 @@ input, textarea { padding: 15px; border-radius: 5px; border: none; }
 .page-title { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; }
 .page-text { font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 30px; }
 .page-image { width: 40%; max-width: 280px; margin: 20px auto; display: block; border-radius: 10px; }
+
+/* -------------------------------------------------- */
+/* ACCESSIBILITY FOCUS INDICATORS STYLING */
+/* -------------------------------------------------- */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+textarea:focus-visible {
+  outline: 3px solid #FC7713;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(10, 63, 31, 0.2);
+}

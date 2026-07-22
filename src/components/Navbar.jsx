@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import "../App.css";
 
 function Navbar() {
@@ -8,10 +8,14 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* LEFT — LOGO */}
+      {/* LEFT — LOGO & BRAND WORDMARK */}
       <div className="logo-container">
         <img src={logo} alt="CareEZ IT SOL Logo" className="logo-icon" />
-        <span className="logo-text">CareEZ</span>
+        {/* FIXED: Split brand name into separate components to apply Style 3 structural typography */}
+        <span className="logo-text">
+          <span className="brand-light">Care</span>
+          <span className="brand-bold">EZ</span>
+        </span>
       </div>
 
       {/* MOBILE MENU BUTTON */}
@@ -26,8 +30,8 @@ function Navbar() {
         <Link to="/ManagedServices" onClick={() => setOpen(false)}>Managed Services</Link>
         <Link to="/ProfessionalServices" onClick={() => setOpen(false)}>Professional Services</Link>
         <Link to="/GreenServices" onClick={() => setOpen(false)}>Green IT & LEED</Link>
-        {/* NEW: Community Shoppe Link */}
-        <Link to="/shoppe" onClick={() => setOpen(false)} style={{ color: '#059669', fontWeight: 'bold' }}>Community Shoppe</Link>
+        {/* FIXED: Darkened the color from #059669 to #047857 to satisfy the Lighthouse 4.5:1 contrast audit */}
+        <Link to="/shoppe" onClick={() => setOpen(false)} style={{ color: '#047857', fontWeight: 'bold' }}>Community Shoppe</Link>
         <Link to="/insights" onClick={() => setOpen(false)}>Insights</Link>
         <Link to="/careers" onClick={() => setOpen(false)}>Careers</Link>
         <Link to="/contact" onClick={() => setOpen(false)} className="cta-button">Contact</Link>
