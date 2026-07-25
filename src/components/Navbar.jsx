@@ -31,7 +31,7 @@ function Navbar() {
         <Link to="/ProfessionalServices" onClick={() => setOpen(false)}>Professional Services</Link>
         <Link to="/GreenServices" onClick={() => setOpen(false)}>Green IT & LEED</Link>
         {/* FIXED: Darkened the color from #059669 to #047857 to satisfy the Lighthouse 4.5:1 contrast audit */}
-        <Link to="/shoppe" onClick={() => setOpen(false)} style={{ color: '#047857', fontWeight: 'bold' }}>Community Shoppe</Link>
+        {/*<Link to="/shoppe" onClick={() => setOpen(false)} style={{ color: '#047857', fontWeight: 'bold' }}>Community Shoppe</Link>*/}
         <Link to="/insights" onClick={() => setOpen(false)}>Insights</Link>
         <Link to="/careers" onClick={() => setOpen(false)}>Careers</Link>
         <Link to="/contact" onClick={() => setOpen(false)} className="cta-button">Contact</Link>
