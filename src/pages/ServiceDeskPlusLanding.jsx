@@ -3,8 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 import servicesImg from "../assets/ServiceDeskPlus.jpg";
 
+// Import your 728x90 Leaderboard Banner image
+import sdpLeaderboard from "../assets/sdp-leaderboard.png";
+
 function ServiceDeskPlusLanding() {
   const navigate = useNavigate();
+
+  // ManageEngine affiliate / resource links
+  const AFFILIATE_LINK = "https://zurl.to/IgcH";
+  const LOG360_AFFILIATE_LINK = "https://zurl.to/vkqS";
+  const CISO_HANDBOOK_LINK = "https://zurl.to/jasQ";
+  const LOG360_SIEM_EBOOK_LINK = "https://zurl.to/a1fJ";
 
   const featuresList = [
     {
@@ -43,8 +52,25 @@ function ServiceDeskPlusLanding() {
         <meta name="description" content="An honest, hands-on look at ManageEngine ServiceDesk Plus — what it does well, where it's clunky, and whether it's worth it for a small Toronto IT team." />
       </Helmet>
 
+      {/* Official ManageEngine 728x90 Leaderboard Banner */}
+      <div className="w-full flex justify-center mb-8">
+        <a 
+          href={AFFILIATE_LINK} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="block group max-w-full"
+        >
+          <img 
+            src={sdpLeaderboard} 
+            alt="ManageEngine ServiceDesk Plus Official Banner" 
+            className="w-full h-auto max-w-[728px] rounded-xl border border-gray-200 shadow-xs group-hover:opacity-95 transition-opacity"
+          />
+        </a>
+      </div>
+
+      {/* Header Block */}
       <div className="mb-10 text-center md:text-left">
-        <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
+        <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
           ITSM Solutions
         </span>
         <h1 className="text-3xl md:text-4xl font-extrabold mt-3 text-gray-900 tracking-tight">
@@ -71,7 +97,7 @@ function ServiceDeskPlusLanding() {
           ))}
         </div>
 
-        {/* Right Column: Visuals & CTAs */}
+        {/* Right Column: Visuals, Primary CTA, & Affiliate Box */}
         <div className="flex flex-col gap-6 sticky top-6">
           <img
             src={servicesImg}
@@ -81,24 +107,40 @@ function ServiceDeskPlusLanding() {
 
           <button
             onClick={() => navigate('/contact')}
-            className="w-full bg-emerald-700 text-white font-bold py-3.5 rounded-xl hover:bg-emerald-600 transition-colors shadow-sm cursor-pointer"
+            className="w-full bg-emerald-700 text-white font-bold py-3.5 rounded-xl hover:bg-emerald-800 transition-colors shadow-sm cursor-pointer text-center"
           >
             Talk to Us About ITSM Setup
           </button>
 
-          {/* Affiliate placeholder slot aligned with the human tone */}
-          <div className="border-2 border-dashed border-gray-300 bg-white rounded-xl p-5 text-center flex flex-col items-center justify-center min-h-[140px]">
-            <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-1">
+          {/* ManageEngine Affiliate CTA Box */}
+          <div className="border border-emerald-200 bg-emerald-50/60 rounded-xl p-5 text-center flex flex-col items-center justify-center shadow-xs">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 block mb-1">
               Evaluating the Platform?
             </span>
-            <p className="text-xs text-gray-500 max-w-sm leading-normal">
-              We work with growing Toronto businesses to configure ticket queues, build custom portals, and structure SLAs cleanly. Drop us a line if you need a hand setting it up.
+            <p className="text-xs text-gray-600 max-w-sm leading-normal mb-4">
+              Get started with the free tier (up to 5 technicians) or explore cloud and on-premise deployment options directly.
             </p>
+            
+            <a
+              href={AFFILIATE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-3.5 px-4 rounded-xl transition-colors shadow-xs text-center block"
+            >
+              Try ServiceDesk Plus Free *
+            </a>
+            <span className="text-[10px] text-gray-500 mt-1 block">
+              (Directs to ManageEngine's official trial portal for ServiceDesk Plus and related IT management tools)
+            </span>
+            <span className="text-[10px] text-gray-500 mt-2 block">
+              *Affiliate Link: CareEZ IT Sol may receive a referral fee if you register or purchase through this link at no additional cost to you.
+            </span>
+            
           </div>
         </div>
       </div>
 
-      {/* Honest trade-offs review section */}
+      {/* Honest Trade-Offs Review Section */}
       <div className="mt-14 bg-white p-6 md:p-8 rounded-2xl border border-gray-200 shadow-xs">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">What I'd Tell You Before You Buy</h2>
         <div className="grid md:grid-cols-2 gap-6 text-sm">
@@ -150,13 +192,99 @@ function ServiceDeskPlusLanding() {
         </div>
       </div>
 
+      {/* Free PDF Guides & E-Books Section */}
+      <div className="mt-10 bg-white border border-emerald-200 rounded-2xl p-6 md:p-8 shadow-sm">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+            Free PDF Guides & E-Books
+          </span>
+        </div>
+        
+        <h3 className="text-2xl font-extrabold text-gray-900 mt-2">
+          Download Official ManageEngine Log360 Resources
+        </h3>
+        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+          Get your free copy of complimentary e-books and white papers on SIEM optimization, cybersecurity metrics, and financial calculations directly from ManageEngine.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6 mt-6">
+          {/* 1. Log360 E-Book */}
+          <div className="p-5 rounded-xl border border-gray-100 bg-gray-50/50 flex flex-col justify-between">
+            <div>
+              <h4 className="font-bold text-gray-900 text-base">
+                ManageEngine Log360 E-Book: Getting the Best Out of Your SIEM
+              </h4>
+              <p className="text-xs text-gray-600 mt-2">
+                Discover strategic insights on maximizing SIEM efficacy, streamlining threat detection workflows, and enhancing security log intelligence.
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-gray-200/60">
+              <a
+                href={LOG360_SIEM_EBOOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition-colors shadow-xs w-full text-center"
+              >
+                Get Your Free Copy →
+              </a>
+            </div>
+          </div>
+
+          {/* 2. Log360 Cost Savings White Paper */}
+          <div className="p-5 rounded-xl border border-gray-100 bg-gray-50/50 flex flex-col justify-between">
+            <div>
+              <h4 className="font-bold text-gray-900 text-base">
+                ManageEngine Log360: How to Calculate the Cost Savings from Your SIEM Implementation White Paper
+              </h4>
+              <p className="text-xs text-gray-600 mt-2">
+                Calculate your SIEM ROI, reduce audit compliance labor, and eliminate alert fatigue with official financial framework white papers.
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-gray-200/60">
+              <a
+                href={LOG360_AFFILIATE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition-colors shadow-xs w-full text-center"
+              >
+                Get Your Free Copy →
+              </a>
+            </div>
+          </div>
+
+          {/* 3. ManageEngine Log360 CISO Handbook */}
+          <div className="p-5 rounded-xl border border-gray-100 bg-gray-50/50 flex flex-col justify-between">
+            <div>
+              <h4 className="font-bold text-gray-900 text-base">
+                ManageEngine Log360: CISO Handbook Cybersecurity Metrics, Budgeting and Leadership
+              </h4>
+              <p className="text-xs text-gray-600 mt-2">
+                Learn best practices for tracking critical security metrics, optimizing cybersecurity budgets, and leading effective security strategy across your enterprise.
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-gray-200/60">
+              <a
+                href={CISO_HANDBOOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition-colors shadow-xs w-full text-center"
+              >
+                Get Your Free Copy →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <span className="text-[10px] text-gray-400 mt-4 block text-center md:text-left">
+          *Note: All direct PDF resource links point to official ManageEngine landing pages to ensure proper registration access and affiliate tracking compliance.
+        </span>
+      </div>
+
       {/* Disclosures Footer */}
       <div className="mt-10 pt-8 border-t border-gray-200">
         <div className="p-5 bg-emerald-50/40 rounded-xl border border-emerald-100/60 text-sm text-emerald-900 leading-relaxed">
-          <strong className="text-gray-900 block mb-1">A Note on How We Cover This</strong>
-          This page is our own hands-on assessment of ServiceDesk Plus — not paid vendor content. We're
-          currently in the application process for the ManageEngine affiliate program and don't have a
-          commercial relationship with them yet. If that changes, any links here will say so clearly.
+          <strong className="text-gray-900 block mb-1">Affiliate & Assessment Disclosure</strong>
+          This review represents our independent evaluation of ManageEngine ServiceDesk Plus based on hands-on IT operations experience—not sponsored vendor content. CareEZ IT Sol is a ManageEngine affiliate partner; if you register or purchase through affiliate links on this page, we may earn a referral commission at zero extra cost to you.
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 text-xs text-gray-500 leading-relaxed mt-6">
@@ -170,8 +298,8 @@ function ServiceDeskPlusLanding() {
           <div>
             <h4 className="font-bold text-gray-700 uppercase tracking-wider mb-2">Trademark Note</h4>
             <p>
-              ManageEngine and ServiceDesk Plus are trademarks of Zoho Corporation. We're an independent
-              consultancy — this review isn't sponsored by or affiliated with ManageEngine.
+              ManageEngine and ServiceDesk Plus are registered trademarks of Zoho Corporation. CareEZ IT Sol is an independent
+              consultancy and service provider.
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { articles } from '../data/articles.jsx';
+// ✅ CORRECT (Default import)
+import articles from '../data/articles.jsx';
 // 1. Correct import position for the Helmet tool
 import { Helmet } from "react-helmet-async";
 

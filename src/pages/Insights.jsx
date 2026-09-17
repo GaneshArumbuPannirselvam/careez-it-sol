@@ -1,24 +1,46 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { articles } from '../data/articles.jsx'; 
+import * as articlesModule from '../data/articles.jsx'; 
 import { Helmet } from "react-helmet-async";
 
 function Insights() {
   const categories = ["All", "Tutorials", "Reviews", "Buying Guides", "Recommended Products"];
   const [activeCategory, setActiveCategory] = useState("All");
 
+  // Robust array normalizer guarantees array extraction regardless of bundler wrapping
+  const rawArticles = useMemo(() => {
+    if (Array.isArray(articlesModule.default)) return articlesModule.default;
+    if (Array.isArray(articlesModule.articles)) return articlesModule.articles;
+    if (Array.isArray(articlesModule)) return articlesModule;
+    return [];
+  }, []);
+
   // Dynamically sort articles by date (descending) and filter by category
   const filteredPosts = useMemo(() => {
-    if (!articles || articles.length === 0) return [];
+    if (!rawArticles || rawArticles.length === 0) return [];
 
-    // 1. Sort copy of array descending by date string parsing
-    const sorted = [...articles].sort((a, b) => new Date(b.date) - new Date(a.date));
+    // 1. Sort copy of array descending by date parsing
+    const sorted = [...rawArticles].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // 2. Apply category filter
     return activeCategory === "All"
       ? sorted
       : sorted.filter(post => post.category === activeCategory);
-  }, [activeCategory]);
+  }, [rawArticles, activeCategory]);
+
+  // Helper function to safely format dates
+  const formatDate = (dateString) => {
+    const parsedDate = new Date(dateString);
+    if (isNaN(parsedDate.getTime())) {
+      return dateString;
+    }
+    return parsedDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC'
+    });
+  };
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto text-left">
@@ -38,7 +60,7 @@ function Insights() {
       </div>
 
       {/* Category Tabs */}
-      <div className="flex gap-4 mb-10 overflow-x-auto pb-2">
+      <div className="flex gap-4 mb-10 overflow-x-auto pb-2 scrollbar-none">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -57,21 +79,14 @@ function Insights() {
       {/* Blog Grid */}
       {filteredPosts && filteredPosts.length > 0 ? (
         <div>
-          {/* Enhanced Grid: Clean, compact spacing without vertical stretching */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch mb-12">
             {filteredPosts.map((post, index) => {
-              // Convert stored date to a human-friendly format (e.g., "July 19, 2026")
-              const displayDate = new Date(post.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                timeZone: 'UTC' // Prevents local browser offset shifts
-              });
+              const displayDate = formatDate(post.date);
 
               return (
                 <div 
-                  key={post.id || index} 
-                  className="bg-white p-6 rounded-xl shadow-xs border border-gray-100 flex flex-col justify-between h-full min-h-[240px] transition-all duration-200 hover:shadow-md"
+                  key={post.id || `article-${index}`} 
+                  className="bg-white p-6 rounded-xl shadow-xs border border-gray-100 flex flex-col justify-between h-full min-h-[260px] transition-all duration-200 hover:shadow-md"
                 >
                   {/* Upper Content Block */}
                   <div className="space-y-3">
@@ -86,7 +101,7 @@ function Insights() {
                       {post.title}
                     </h3>
                     
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                       {post.summary}
                     </p>
                   </div>
@@ -105,16 +120,6 @@ function Insights() {
               );
             })}
           </div>
-
-          {/* Clean Bottom Navigation Footer */}
-          {/*<div className="mt-12 pt-6 border-t border-gray-100">
-            <button 
-              onClick={() => setActiveCategory("All")}
-              className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors bg-transparent border-0 p-0 cursor-pointer"
-            >
-              ← Back to All Insights
-            </button>
-          </div>*/}
         </div>
       ) : (
         <div className="text-center py-16 bg-white rounded-xl border border-gray-100 mb-12">
