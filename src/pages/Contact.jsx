@@ -103,7 +103,7 @@ function Contact() {
             <div className="space-y-2">
               <div>
                 <span className="text-xs text-blue-600 block uppercase font-extrabold tracking-wider">Call Us:</span>
-                <a href="tel:+13653071754" className="font-bold text-blue-900 hover:text-blue-700 underline block text-lg">+1 (365) 307-1754</a>
+                <a href="tel:+1(289) 378-9555" className="font-bold text-blue-900 hover:text-blue-700 underline block text-lg">+1 (289) 378-9555</a>
               </div>
               <div className="pt-2 border-t border-blue-100">
                 <span className="text-xs text-blue-600 block uppercase font-extrabold tracking-wider">Email Us:</span>
